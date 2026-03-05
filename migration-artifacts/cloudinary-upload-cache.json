@@ -1,0 +1,52 @@
+{
+  "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744286028/Graphic_waves_qtvac7.svg": {
+    "key": "graphic_waves",
+    "cloudinary_url": "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744286028/Graphic_waves_qtvac7.svg",
+    "cloudinary_public_id": "Graphic_waves_qtvac7",
+    "sanity_asset_id": "image-a85b19a75d625e4ccd0c5c469dc046888df5f017-150x85-svg",
+    "sanity_url": "https://cdn.sanity.io/images/y9d33xfx/production/a85b19a75d625e4ccd0c5c469dc046888df5f017-150x85.svg",
+    "width": 150,
+    "height": 85,
+    "originalFilename": "Graphic_waves_qtvac7.svg"
+  },
+  "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744125894/Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg": {
+    "key": "logo_gradient",
+    "cloudinary_url": "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744125894/Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg",
+    "cloudinary_public_id": "Type_Default_Colour_Gradient_on_Blue_lgi2ha",
+    "sanity_asset_id": "image-3e91dbe1161b0925402f57a91bce00b18b4ba682-100x41-svg",
+    "sanity_url": "https://cdn.sanity.io/images/y9d33xfx/production/3e91dbe1161b0925402f57a91bce00b18b4ba682-100x41.svg",
+    "width": 100,
+    "height": 41,
+    "originalFilename": "Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg"
+  },
+  "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744279814/Vector_rdxjfp.svg": {
+    "key": "nav_vector",
+    "cloudinary_url": "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744279814/Vector_rdxjfp.svg",
+    "cloudinary_public_id": "Vector_rdxjfp",
+    "sanity_asset_id": "image-bc6784732857c165a4c89ac0b5c76de93364afbf-28x24-svg",
+    "sanity_url": "https://cdn.sanity.io/images/y9d33xfx/production/bc6784732857c165a4c89ac0b5c76de93364afbf-28x24.svg",
+    "width": 28,
+    "height": 24,
+    "originalFilename": "Vector_rdxjfp.svg"
+  },
+  "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1745050251/Graphic-1-Transparent_1_y95aqf.svg": {
+    "key": "who_we_are_overlay",
+    "cloudinary_url": "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1745050251/Graphic-1-Transparent_1_y95aqf.svg",
+    "cloudinary_public_id": "Graphic-1-Transparent_1_y95aqf",
+    "sanity_asset_id": "image-8b1fcddeb158c2d6913fc590aabdf46c390e76c2-150x85-svg",
+    "sanity_url": "https://cdn.sanity.io/images/y9d33xfx/production/8b1fcddeb158c2d6913fc590aabdf46c390e76c2-150x85.svg",
+    "width": 150,
+    "height": 85,
+    "originalFilename": "Graphic-1-Transparent_1_y95aqf.svg"
+  },
+  "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744124528/Graphic-2-Transparent_xw68uq.svg": {
+    "key": "hero_overlay",
+    "cloudinary_url": "https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744124528/Graphic-2-Transparent_xw68uq.svg",
+    "cloudinary_public_id": "Graphic-2-Transparent_xw68uq",
+    "sanity_asset_id": "image-05d0bece18e869859a549f47ef15ae4c2217289c-150x85-svg",
+    "sanity_url": "https://cdn.sanity.io/images/y9d33xfx/production/05d0bece18e869859a549f47ef15ae4c2217289c-150x85.svg",
+    "width": 150,
+    "height": 85,
+    "originalFilename": "Graphic-2-Transparent_xw68uq.svg"
+  }
+}

@@ -15,6 +15,7 @@ import {
 import { FaLinkedin } from 'react-icons/fa'; // Example LinkedIn Icon
 import { FiCode } from 'react-icons/fi'; // Example Code Icon
 import { poppins } from '@/styles/theme'; // Assuming poppins is exported from theme
+import { MIGRATED_SANITY_ASSETS } from '../constants/migratedSanityAssets';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,7 +34,7 @@ const Footer = () => {
             <Stack direction={{ base: 'column', md: 'row' }}>
             <Box>
               <Image
-                src={'https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744125894/Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg'} // Replace with your actual logo URL if different
+                src={MIGRATED_SANITY_ASSETS.logoGradient}
                 alt="Ashton & Carrington Logo"
                 height={{ base: '80px', md: '80px' }} // Adjust size as needed
                 objectFit="contain"

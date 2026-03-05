@@ -10,6 +10,7 @@ import 'focus-visible/dist/focus-visible';
 import sanityClient  from '../../sanity/lib/client'; 
 // 2. Import urlFor helper (adjust path if needed)
 import { urlForImage } from '../../sanity/lib/image'; 
+import { MIGRATED_SANITY_ASSETS } from "../constants/migratedSanityAssets";
 
 import {
   Box,
@@ -74,6 +75,9 @@ export default function Home({ landingPageData }) {
     servicesSection, 
     whoWeAreSection 
   } = landingPageData || {};
+  const heroLogoUrl = hero?.logo
+    ? urlForImage(hero.logo).width(611).height(250).url()
+    : MIGRATED_SANITY_ASSETS.logoGradient;
 
   return (
     <Box
@@ -91,7 +95,7 @@ export default function Home({ landingPageData }) {
         left="0"
         width={{base:"110%", md: "100%", lg: "100%"}}
         height={{base:"10%", md: "20%", lg: "45%"}}
-        backgroundImage="url('https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744124528/Graphic-2-Transparent_xw68uq.svg')"
+        backgroundImage={`url('${MIGRATED_SANITY_ASSETS.heroOverlay}')`}
         backgroundSize="cover"
         backgroundPosition="right"
         backgroundRepeat="no-repeat"
@@ -117,19 +121,14 @@ export default function Home({ landingPageData }) {
         >
         <Box py={{base: 10, lg: 16}}>
 
-            {hero?.logo && (
+            {heroLogoUrl && (
               <Center>
                     <Image
-                      // Use Sanity image builder
-                      src={'https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744125894/Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg'}
-                      //https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744125894/Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg
-                      alt={'Ashton & Carrington Logo'} // Use heading as alt text fallback
+                      src={heroLogoUrl}
+                      alt={'Ashton & Carrington Logo'}
                       width={611}
                       height={250}
                       priority
-                      placeholder="blur"
-                      // Generate blurDataURL if metadata exists
-                      blurDataURL={'https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744125894/Type_Default_Colour_Gradient_on_Blue_lgi2ha.svg'} 
                     />
               </Center>
             )}
@@ -188,4 +187,3 @@ export async function getStaticProps() {
     // revalidate: 60, // In seconds (e.g., every minute)
   };
 }
-

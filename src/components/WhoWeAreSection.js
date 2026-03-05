@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import  { urlForImage } from '../../sanity/lib/image'; 
+import { MIGRATED_SANITY_ASSETS } from '../constants/migratedSanityAssets';
 
 const FeatureCard = ({ imageUrl, title, children }) => {
   return (
@@ -116,7 +117,7 @@ const WhoWeAreSection = ({ sectionData }) => {
                 right="0"
                 width="100%"
                 height="120%"
-                backgroundImage="url('https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1745050251/Graphic-1-Transparent_1_y95aqf.svg')"
+                backgroundImage={`url('${MIGRATED_SANITY_ASSETS.whoWeAreOverlay}')`}
                 backgroundSize="contain"
                 backgroundPosition="right center"
                 backgroundRepeat="no-repeat"

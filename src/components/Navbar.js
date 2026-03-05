@@ -16,6 +16,7 @@ import { useState } from 'react';
 import Form from '@/components/Form'
 import MobileDrawer from './MobileDrawer'; // Import the new component
 import ContactModal from './ContactModal'; // Import the ContactModal component
+import { MIGRATED_SANITY_ASSETS } from '../constants/migratedSanityAssets';
 
 const NavLink = ({ children, href }) => (
   <Link
@@ -71,7 +72,7 @@ export default function Navbar(props) {
         {/* Logo - Using Image component like in index.js */}
         <Link href="/" _hover={{ textDecoration: 'none' }}>
              <Image
-                src={'https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744279814/Vector_rdxjfp.svg'}
+                src={MIGRATED_SANITY_ASSETS.navLogo}
                 alt="Ashton & Carrington Logo"
                 height={'40px'} // Adjust height as needed
                 width={'auto'} // Maintain aspect ratio
@@ -111,7 +112,7 @@ export default function Navbar(props) {
         <Box pl={4} >
           <Link href="/" _hover={{ textDecoration: 'none' }}>
                 <Image
-                    src={'https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744279814/Vector_rdxjfp.svg'}
+                    src={MIGRATED_SANITY_ASSETS.navLogo}
                     alt="Ashton & Carrington Logo"
                     height={'40px'} // Adjust height as needed
                     width={'auto'} // Maintain aspect ratio

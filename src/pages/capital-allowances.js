@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import client from '../../sanity/lib/client';
 import { PortableText } from '@portabletext/react';
 import ContactModal from '../components/ContactModal';
+import { MIGRATED_SANITY_ASSETS } from '../constants/migratedSanityAssets';
 
 
 import {
@@ -163,7 +164,7 @@ export default function RnDTaxCreditsPage({ pageData }) {
   const [activeSection, setActiveSection] = useState(sections[0]?.id || '');
 
   // Use Sanity image URL or fallback to default
-  const backgroundImageUrl = pageData?.backgroundImageUrl || 'https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1744286028/Graphic_waves_qtvac7.svg';
+  const backgroundImageUrl = pageData?.backgroundImageUrl || MIGRATED_SANITY_ASSETS.pageBackgroundWaves;
 
   const handleLinkClick = (id) => {
     setActiveSection(id);

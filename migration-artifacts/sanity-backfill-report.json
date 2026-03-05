@@ -1,0 +1,32 @@
+[
+  {
+    "documentType": "privacyPolicyPage",
+    "documentId": "02eeee01-cfb7-4e66-805b-d866bfd0e195",
+    "action": "UPDATED",
+    "reason": "backgroundImage was missing and has been set"
+  },
+  {
+    "documentType": "termsPage",
+    "documentId": "b2faf7e2-df93-4c65-889e-7daa6e204171",
+    "action": "UPDATED",
+    "reason": "backgroundImage was missing and has been set"
+  },
+  {
+    "documentType": "accountsnFilingPage",
+    "documentId": "d6b421b7-883d-47a2-9b2c-fc8a6bfd0f07",
+    "action": "UNCHANGED",
+    "reason": "backgroundImage already set"
+  },
+  {
+    "documentType": "capitalAllowancePage",
+    "documentId": "29a465c7-292e-4541-8be8-4ae660fcb2e5",
+    "action": "UNCHANGED",
+    "reason": "backgroundImage already set"
+  },
+  {
+    "documentType": "rndTaxCreditsPage",
+    "documentId": "d7bac250-c1a7-4a2e-974e-36c1e9420eeb",
+    "action": "UPDATED",
+    "reason": "backgroundImage was missing and has been set"
+  }
+]
