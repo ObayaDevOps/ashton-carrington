@@ -27,6 +27,7 @@ import ServicesSection from '../components/ServicesSection';
 import WhoWeAreSection from '../components/WhoWeAreSection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import HeroOverlay from '../components/HeroOverlay';
 
 // 3. Define the GROQ query
 const landingPageQuery = `
@@ -89,19 +90,7 @@ export default function Home({ landingPageData }) {
       position="relative"
       overflow="hidden"
     >
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        width={{base:"110%", md: "100%", lg: "100%"}}
-        height={{base:"10%", md: "20%", lg: "45%"}}
-        backgroundImage={`url('${MIGRATED_SANITY_ASSETS.heroOverlay}')`}
-        backgroundSize="cover"
-        backgroundPosition="right"
-        backgroundRepeat="no-repeat"
-        opacity={0.1}
-        zIndex={0}
-      />
+      <HeroOverlay />
 
       <Head>
         {/* Use data from Sanity */}

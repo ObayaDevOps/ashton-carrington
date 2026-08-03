@@ -5,16 +5,18 @@ import CapitalAllowancePageSchema from './schemas/capitalAllowancePageSchema'
 import AccountsnFilingPageSchema from './schemas/accountsFilingPageSchema'
 import TermsPageSchema from './schemas/termsPageSchema'
 import PrivacyPageSchema from './schemas/privacyPolicyPageSchema'
+import AboutPageSchema from './schemas/aboutPageSchema'
 
 
 
 export const schema = {
   types: [
-    LandingPageSchema, 
+    LandingPageSchema,
     RnDTaxCreditsPageSchema,
     CapitalAllowancePageSchema,
     AccountsnFilingPageSchema,
     TermsPageSchema,
-    PrivacyPageSchema
+    PrivacyPageSchema,
+    AboutPageSchema
   ],
 }

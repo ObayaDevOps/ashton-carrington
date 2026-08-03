@@ -44,6 +44,7 @@ export default function Navbar(props) {
 
   const navItems = [
     { label: 'Home', href: '/'},
+    { label: 'About', href: '/about' },
     { label: 'Accounts & Filling', href: '/accounts-filing' },
     { label: 'R&D Tax Credits', href: '/research-and-development-tax-credits' },
     { label: 'Capital Allowances', href: '/capital-allowances' },
