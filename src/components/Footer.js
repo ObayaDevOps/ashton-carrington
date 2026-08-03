@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { FaLinkedin } from 'react-icons/fa'; // Example LinkedIn Icon
 import { FiCode } from 'react-icons/fi'; // Example Code Icon
-import { poppins } from '@/styles/theme'; // Assuming poppins is exported from theme
+import { poppins, tiny5 } from '@/styles/theme'; // Assuming poppins is exported from theme
 import { MIGRATED_SANITY_ASSETS } from '../constants/migratedSanityAssets';
 
 const Footer = () => {
@@ -45,12 +45,14 @@ const Footer = () => {
               <Link href="https://www.linkedin.com/company/ashton-and-carrington/" isExternal aria-label="LinkedIn">
                 <Icon as={FaLinkedin} boxSize={6} color="white" bg="#202020" p={1} borderRadius="md" />
               </Link>
-              {/* Replace with actual link and consider a more specific icon if needed */}
-              <Link href="#" isExternal aria-label="Developer Portfolio/Website">
+              <Link href="/studio" aria-label="Sanity Studio">
                 <Icon as={FiCode} boxSize={6} color="white" bg="#202020" p={1} borderRadius="md" />
               </Link>
               <Button
-                size="sm"
+                size="xs"
+                fontSize="0.7rem"
+                height="1.5rem"
+                px={2}
                 variant="outline"
                 colorScheme="whiteAlpha"
                 borderColor="gray.600"
@@ -58,8 +60,16 @@ const Footer = () => {
                 _hover={{ bg: 'gray.700' }}
                 ml={2} // Add margin to space it from icons
               >
-              <Link href='https://www.dralegawebops.com/' isExternal aria-label="Developer Portfolio/Website" color='white'>
-                Built by DWO
+              <Link
+                href='https://www.twofivesix.online/'
+                isExternal
+                aria-label="Developer Portfolio/Website"
+                color='white'
+              >
+                Built by&nbsp;
+                <Text as="span" fontFamily={tiny5.style.fontFamily}>
+                  twofivesix
+                </Text>
               </Link>
                 
               </Button>
