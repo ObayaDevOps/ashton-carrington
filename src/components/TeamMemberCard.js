@@ -31,7 +31,10 @@ const TeamMemberCard = ({ name, role, bio, imageUrl, linkedinUrl }) => {
         borderColor="transparent"
         boxShadow="0px 0px 20px 3px rgba(0,4,14,1)"
         transition="all 0.2s ease-in-out"
-        _hover={{ borderColor: '#00DEE3' }}
+        _hover={{
+          borderColor: '#00DEE3',
+          boxShadow: '0px 0px 30px 8px rgba(45,255,196,0.65)',
+        }}
         display="flex"
         alignItems="center"
         justifyContent="center"
