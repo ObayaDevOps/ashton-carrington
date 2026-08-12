@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer"
+import { Resend } from "resend"
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -21,47 +21,48 @@ export default async function handler(req, res) {
     });
   }
 
-  const { SMTP_USER, SMTP_PASSWORD, RECIPIENT_ADDRESS } = process.env;
-  if (!SMTP_USER || !SMTP_PASSWORD || !RECIPIENT_ADDRESS) {
+  const { RESEND_API_KEY, MAIL_FROM, RECIPIENT_ADDRESS } = process.env;
+  if (!RESEND_API_KEY || !MAIL_FROM || !RECIPIENT_ADDRESS) {
     return res.status(500).json({
       ok: false,
       error: "SERVER_CONFIG_ERROR"
     });
   }
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: SMTP_USER,
-      pass: SMTP_PASSWORD
-    }
-  });
-
-  const mailData = {
-    from: SMTP_USER,
-    to: RECIPIENT_ADDRESS,
-    replyTo: email,
-    subject: `Ashton & Carrington Contact form submission from ${name}`,
-    html: `<h1>${name} has contacted you</h1>
-      <p>You have a contact form submission</p><br>
-      <p><strong>Email: </strong> ${email}</p><br>
-      <p><strong>Phone Number: </strong> ${phoneNumber}</p><br>
-      <p><strong>Message: </strong> ${userMessage}</p><br>`
-  };
+  const resend = new Resend(RESEND_API_KEY);
 
   try {
-    const info = await transporter.sendMail(mailData);
+    const { data, error } = await resend.emails.send({
+      from: MAIL_FROM,
+      to: RECIPIENT_ADDRESS,
+      replyTo: email,
+      subject: `Ashton & Carrington Contact form submission from ${name}`,
+      html: `<h1>${name} has contacted you</h1>
+        <p>You have a contact form submission</p><br>
+        <p><strong>Email: </strong> ${email}</p><br>
+        <p><strong>Phone Number: </strong> ${phoneNumber}</p><br>
+        <p><strong>Message: </strong> ${userMessage}</p><br>`
+    });
+
+    if (error) {
+      console.error("EMAIL_SEND_FAILED", {
+        name: error?.name,
+        message: error?.message
+      });
+      return res.status(502).json({
+        ok: false,
+        error: "EMAIL_SEND_FAILED"
+      });
+    }
+
     return res.status(200).json({
       ok: true,
-      messageId: info?.messageId || null
+      messageId: data?.id || null
     });
   } catch (error) {
     console.error("EMAIL_SEND_FAILED", {
-      code: error?.code,
-      responseCode: error?.responseCode,
-      command: error?.command
+      name: error?.name,
+      message: error?.message
     });
 
     return res.status(502).json({
