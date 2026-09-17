@@ -116,7 +116,7 @@ const Footer = () => {
               color="white"
               lineHeight={'1.5rem'}
             >
-              Trinity Offices, 114 Northenden Rd, Sale, M33 3HD
+              Centenary House, Centenary Way, Manchester, England, M50 1RF
             </Text>
 
             <Text 
