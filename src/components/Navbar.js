@@ -44,8 +44,7 @@ export default function Navbar(props) {
 
   const navItems = [
     { label: 'Home', href: '/'},
-    // Temporarily hidden from users — /about route still works for editing
-    // { label: 'About', href: '/about' },
+    { label: 'About', href: '/about' },
     { label: 'Accounts & Filling', href: '/accounts-filing' },
     { label: 'R&D Tax Credits', href: '/research-and-development-tax-credits' },
     { label: 'Capital Allowances', href: '/capital-allowances' },
